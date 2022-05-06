@@ -1,0 +1,7 @@
+<p>color-picker works!</p>
+
+<label>
+  <input [value]="changeColor" type="color" (change)="updateColor($event.target.value)">
+</label>
+
+<div [style.background]="changeColor" style="width: 300px; height: 200px"></div>
