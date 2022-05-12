@@ -1,0 +1,22 @@
+
+    <h4>Product Create</h4>
+  <form #productForm="ngForm"(ngSubmit)="onSubmit(productForm)" >
+   <div>
+     <label>Name: </label>
+     <input type="text" class="form-group" [(ngModel)]="product.name" #name="ngModel" name="txtName" required="required" minlength="5">
+     <span *ngIf="name.touched && name.errors?.required" style="color: red">Không được để trống </span>
+     <span *ngIf="name.touched && name.errors?.minlength" style="color: red"> Minlength 5</span>
+   </div>
+    <div>
+      <label>Price: </label>
+      <input type="text" class="form-group" [(ngModel)]="product.price" #price="ngModel" name="txtPrice" required="required">
+      <span *ngIf="price.touched && price.errors?.required" style="color: red">Không được để trống </span>
+    </div>
+    <div>
+      <label>Description: </label>
+      <input type="text" class="form-group" [(ngModel)]="product.description" #description="ngModel" name="txtDescription">
+      <span *ngIf="description.touched && description.errors?.required" style="color: red">Không được để trống </span>
+    </div>
+    <button type="submit" class="btn bg-primary">Create</button>
+  </form>
+

@@ -1,0 +1,32 @@
+{
+  "product": [
+    {
+      "id": 4,
+      "name": "IPhone 8",
+      "price": "200000",
+      "description": "98%",
+      "category": "Iphone"
+    },
+    {
+      "id": "3",
+      "name": "oppo",
+      "price": "2000000",
+      "description": "xịn",
+      "category": "oppoA7"
+    },
+    {
+      "id": "8",
+      "name": "iphone 12",
+      "price": "10000000",
+      "description": "96%",
+      "category": "iphone"
+    },
+    {
+      "id": "5",
+      "name": "sony",
+      "price": "1300000",
+      "description": "fggf",
+      "category": "television"
+    }
+  ]
+}

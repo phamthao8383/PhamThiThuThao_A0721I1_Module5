@@ -1,0 +1,20 @@
+<h3>Product List</h3>
+<table class="table table-striped" >
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor="let product of product">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td>
+      <a class="btn btn-info m-2">Detail</a>
+      <a class="btn btn-warning m-2">Edit</a>
+    </td>
+  </tr>
+</table>

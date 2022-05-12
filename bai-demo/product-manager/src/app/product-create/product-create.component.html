@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h3>Create</h3>
+  <form [formGroup]="products" (ngSubmit)="save()">
+    <div class="input-group input-group-sm mb-3">
+      <label>Id:</label>
+      <input type="text" class="form-control" aria-label="Sizing example input" formControlName="id">
+    </div>
+    <p *ngIf="!products.get('id')?.valid && products.get('id').touched" class="text-danger">Nhap id</p>
+    <div class="input-group input-group-sm mb-3">
+      <label >Name:</label>
+      <input type="text" class="form-control" aria-label="Sizing example input" formControlName="name">
+    </div>
+    <p *ngIf="!products.get('name')?.valid && products.get('name').touched" class="text-danger">Nhap name</p>
+    <div class="input-group input-group-sm mb-3">
+      <label>Price:</label>
+      <input type="text" class="form-control" aria-label="Sizing example input" formControlName="price">
+    </div>
+    <p *ngIf="!products.get('price')?.valid && products.get('price').touched" class="text-danger">Nhập Price</p>
+    <div class="input-group input-group-sm mb-3">
+      <label>Description:</label>
+      <input type="text" class="form-control" aria-label="Sizing example input" formControlName="description">
+    </div>
+    <p *ngIf="!products.get('description')?.valid && products.get('description').touched" class="text-danger">Nhập Description</p>
+    <div class="input-group input-group-sm mb-3">
+      <label>Category:</label>
+      <input type="text" class="form-control" aria-label="Sizing example input" formControlName="category">
+      <p *ngIf="!products.get('category')?.valid && products.get('category').touched" class="text-danger">Nhap Category</p>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!products.valid">Create</button>
+  </form>
+</div>

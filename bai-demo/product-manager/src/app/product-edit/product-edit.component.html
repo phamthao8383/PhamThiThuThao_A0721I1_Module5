@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h3>Edit</h3>
+  <form [formGroup]="product1" (ngSubmit)="update()">
+    <div hidden class="input-group input-group-sm mb-3">
+      <input type="hidden" [value]="product.id" [(ngModel)]="product.id" type="text" class="form-control"
+             aria-label="Sizing example input" formControlName="id">
+    </div>
+    <p *ngIf="!product1.get('id')?.valid && product1.get('id').touched" class="text-danger">Nhap id</p>
+    <div class="input-group input-group-sm mb-3">
+      <label>Name:</label>
+      <input [(ngModel)]="product.name" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="name">
+    </div>
+    <p *ngIf="!product1.get('name')?.valid && product1.get('name').touched" class="text-danger">Nhap name</p>
+    <div class="input-group input-group-sm mb-3">
+      <label>Price:</label>
+      <input [(ngModel)]="product.price" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="price">
+    </div>
+    <p *ngIf="!product1.get('price')?.valid && product1.get('price').touched" class="text-danger">Nhap price</p>
+    <div class="input-group input-group-sm mb-3">
+      <label>Description:</label>
+      <input [(ngModel)]="product.description" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="description">
+    </div>
+    <p *ngIf="!product1.get('description')?.valid && product1.get('description').touched" class="text-danger">
+      Nhap Description</p>
+    <div class="input-group input-group-sm mb-3">
+      <label >Category:</label>
+      <input [(ngModel)]="product.category" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="category">
+      <p *ngIf="!product1.get('category')?.valid && product1.get('category').touched" class="text-danger">
+        Nhập Category</p>
+
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="!product1.valid">Update</button>
+  </form>
+</div>
