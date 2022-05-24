@@ -1,7 +1,10 @@
 export interface IProduct {
-  id?: number;
-  name?: string;
-  price?: number;
-  description?: any;
-  category?: string;
+  id_ba?: number;
+  id?:number;
+  ten?: string;
+  batDau?: string;
+  ketThuc?: string;
+  liDo?: string;
+  phuongPhap?: string;
+  tenBacSi?: string;
 }

@@ -2,37 +2,55 @@
   <h3>Edit</h3>
   <form [formGroup]="product1" (ngSubmit)="update()">
     <div hidden class="input-group input-group-sm mb-3">
-      <input type="hidden" [value]="product.id" [(ngModel)]="product.id" type="text" class="form-control"
+      <input [value]="product.id_ba" [(ngModel)]="product.id_ba" type="text" readonly class="form-control"
+             aria-label="Sizing example input" formControlName="id_ba">
+    </div>
+    <div hidden class="input-group input-group-sm mb-3">
+      <input type="text" readonly [value]="product.id" [(ngModel)]="product.id" class="form-control"
              aria-label="Sizing example input" formControlName="id">
     </div>
-    <p *ngIf="!product1.get('id')?.valid && product1.get('id').touched" class="text-danger">Nhap id</p>
     <div class="input-group input-group-sm mb-3">
-      <label>Name:</label>
-      <input [(ngModel)]="product.name" type="text" class="form-control" aria-label="Sizing example input"
-             formControlName="name">
+      <label>Ten:</label>
+      <input [(ngModel)]="product.ten" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="ten">
     </div>
-    <p *ngIf="!product1.get('name')?.valid && product1.get('name').touched" class="text-danger">Nhap name</p>
+    <p *ngIf="!product1.get('ten')?.valid && product1.get('ten').touched" class="text-danger">Nhap name</p>
     <div class="input-group input-group-sm mb-3">
-      <label>Price:</label>
-      <input [(ngModel)]="product.price" type="text" class="form-control" aria-label="Sizing example input"
-             formControlName="price">
+      <label>Bat Dau:</label>
+      <input [(ngModel)]="product.batDau" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="batDau">
     </div>
-    <p *ngIf="!product1.get('price')?.valid && product1.get('price').touched" class="text-danger">Nhap price</p>
-    <div class="input-group input-group-sm mb-3">
-      <label>Description:</label>
-      <input [(ngModel)]="product.description" type="text" class="form-control" aria-label="Sizing example input"
-             formControlName="description">
-    </div>
-    <p *ngIf="!product1.get('description')?.valid && product1.get('description').touched" class="text-danger">
-      Nhap Description</p>
-    <div class="input-group input-group-sm mb-3">
-      <label >Category:</label>
-      <input [(ngModel)]="product.category" type="text" class="form-control" aria-label="Sizing example input"
-             formControlName="category">
-      <p *ngIf="!product1.get('category')?.valid && product1.get('category').touched" class="text-danger">
-        Nhập Category</p>
+    <p *ngIf="!product1.get('batDau')?.valid && product1.get('batDau').touched" class="text-danger">Nhap thoi gian</p>
 
+    <div class="input-group input-group-sm mb-3">
+      <label>Ket Thuc:</label>
+      <input [(ngModel)]="product.ketThuc" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="ketThuc">
     </div>
+    <p *ngIf="!product1.get('ketThuc')?.valid && product1.get('ketThuc').touched" class="text-danger">Nhap thoi gian
+<!--    </p>-->
+    <div class="input-group input-group-sm mb-3">
+      <label>Lý do:</label>
+      <input [(ngModel)]="product.liDo" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="liDo">
+    </div>
+    <p *ngIf="!product1.get('liDo')?.valid && product1.get('liDo').touched" class="text-danger">Nhap
+    </p>
+    <div class="input-group input-group-sm mb-3">
+      <label>Phuong Pháp:</label>
+      <input [(ngModel)]="product.phuongPhap" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="phuongPhap">
+    </div>
+    <p *ngIf="!product1.get('phuongPhap')?.valid && product1.get('phuongPhap').touched" class="text-danger">Nhap PP
+    </p>
+    <div class="input-group input-group-sm mb-3">
+      <label>ten bác si:</label>
+      <input [(ngModel)]="product.tenBacSi" type="text" class="form-control" aria-label="Sizing example input"
+             formControlName="tenBacSi">
+    </div>
+    <p *ngIf="!product1.get('tenBacSi')?.valid && product1.get('tenBacSi').touched" class="text-danger">Nhap ten bac si
+    </p>
+
     <button class="btn btn-success" type="submit" [disabled]="!product1.valid">Update</button>
   </form>
 </div>

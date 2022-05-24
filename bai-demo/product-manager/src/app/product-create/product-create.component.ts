@@ -21,7 +21,6 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {
     this.products= new FormGroup(
       {
-        id: new FormControl('',[Validators.required]),
         name: new FormControl('',[Validators.required]),
         price: new FormControl('',[Validators.required]),
         description: new FormControl('',[Validators.required]),
@@ -31,6 +30,7 @@ export class ProductCreateComponent implements OnInit {
     )
   }
   save(){
+    console.log(this.products.value);
     this._service.save(this.products.value).subscribe(()=>{
       this._router.navigateByUrl('/product');
     })

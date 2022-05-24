@@ -1,0 +1,14 @@
+{
+  "NguoiBenh": [
+    {
+      "id_ba": 1,
+      "id": 1,
+      "ten": "",
+      "batDau": "29-11-2000",
+      "ketThuc": "21-11-2000",
+      "liDo": "",
+      "phuongPhap": "Mổ",
+      "tenBacSi": "Nguyen V"
+    }
+  ]
+}

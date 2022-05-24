@@ -25,12 +25,12 @@ export class ProductDeleteComponent implements OnInit {
     })
   }
   close() {
-    this._router.navigateByUrl('product');
+    this._router.navigateByUrl('NguoiBenh');
   }
   delete(){
     this._service.delete(this.products.id).subscribe(()=>{
-      alert("Xóa thành công"+this.products.name);
-      this._router.navigateByUrl('product');
+      alert("Xóa thành công"+this.products.ten);
+      this._router.navigateByUrl('NguoiBenh');
     })
   }
 

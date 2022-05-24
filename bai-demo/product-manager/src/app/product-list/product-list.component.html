@@ -3,23 +3,31 @@
   <table class="table">
     <tr>
       <th>#</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th>Category</th>
+      <th>Mã Bệnh An</th>
+      <th>Mã Bệnh Nhân</th>
+      <th>Tên Bệnh Nhân</th>
+      <th>Ngày Bắt Đầu</th>
+      <th>Ngày Kết Thúc</th>
+      <th>Lí do</th>
+      <th>Phương pháp</th>
+      <th>Tên Bac si</th>
       <th>Update</th>
       <th>Delete</th>
     </tr>
     <tr *ngFor="let item of products; index as i">
       <td>{{i+1}}</td>
-      <td>{{item.name}}</td>
-      <td>{{item.price}}</td>
-      <td>{{item.description}}</td>
-      <td>{{item.category}}</td>
+      <td>{{item.id_ba}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.ten}}</td>
+      <td>{{item.batDau}}</td>
+      <td>{{item.ketThuc}}</td>
+      <td>{{item.liDo}}</td>
+      <td>{{item.phuongPhap}}</td>
+      <td>{{item.tenBacSi}}</td>
       <td>
-        <button class="btn btn-warning" [routerLink]="['/product/edit', item.id]">Update</button>
+        <button class="btn btn-warning" [routerLink]="['/NguoiBenh/edit', item.id]">Update</button>
       </td>
-      <td><button class="btn btn-danger" [routerLink]="['/product/delete', item.id]">Delete</button></td>
+      <td><button class="btn btn-danger" [routerLink]="['/NguoiBenh/delete', item.id]">Delete</button></td>
     </tr>
   </table>
 </div>

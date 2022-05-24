@@ -20,21 +20,21 @@ products: IProduct[] = [];
   }
 
   getAll(): Observable<IProduct[]> {
-    return this._httpClient.get<IProduct[]>(API_URL + '/product');
+    return this._httpClient.get<IProduct[]>(API_URL + '/NguoiBenh');
   }
   save(value): Observable<IProduct> {
-    return this._httpClient.post<IProduct>(API_URL + '/product', value);
+    return this._httpClient.post<IProduct>(API_URL + '/NguoiBenh', value);
   }
   findById(id): Observable<IProduct> {
-    return this._httpClient.get<IProduct>(API_URL + '/product' + '/' + id);
+    return this._httpClient.get<IProduct>(API_URL + '/NguoiBenh' + '/' + id);
   }
 
   update(id, product1): Observable<IProduct> {
-    return this._httpClient.put<IProduct>(API_URL + '/product' + '/' + id, product1);
+    return this._httpClient.put<IProduct>(API_URL + '/NguoiBenh' + '/' + id, product1);
   }
 
   delete(id: number): Observable<IProduct> {
-    return this._httpClient.delete<IProduct>(API_URL + '/product/' + id);
+    return this._httpClient.delete<IProduct>(API_URL + '/NguoiBenh/' + id);
   }
 
 }

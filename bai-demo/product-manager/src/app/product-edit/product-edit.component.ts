@@ -27,17 +27,20 @@ export class ProductEditComponent implements OnInit {
     })
     this.product1 = new FormGroup(
       {
+        id_ba: new FormControl('',[Validators.required]),
         id: new FormControl('',[Validators.required]),
-        name: new FormControl('',[Validators.required]),
-        price: new FormControl('',[Validators.required, Validators.min(0)] ),
-        description: new FormControl('', [Validators.required]),
-        category: new FormControl('',[Validators.required])
+        ten: new FormControl('',[Validators.required]),
+        batDau: new FormControl('',[Validators.required]),
+        ketThuc: new FormControl('',[Validators.required]),
+        liDo: new FormControl('',[Validators.required]),
+        phuongPhap: new FormControl('',[Validators.required]),
+        tenBacSi: new FormControl('',[Validators.required])
       }
     )
   }
   update(){
     this._service.update(this.product1.value.id,this.product1.value).subscribe(()=>{
-      this._router.navigateByUrl('/product');
+      this._router.navigateByUrl('/NguoiBenh');
     })
   }
 
