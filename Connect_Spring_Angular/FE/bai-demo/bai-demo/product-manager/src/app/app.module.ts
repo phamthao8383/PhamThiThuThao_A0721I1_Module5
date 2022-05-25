@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
+
 @NgModule({
   declarations: [
+
     AppComponent,
     ProductListComponent,
     ProductCreateComponent,
@@ -22,7 +24,8 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

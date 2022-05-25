@@ -19,7 +19,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
     @GetMapping()
-    public ResponseEntity<Product> findAllCustomer() {
+    public ResponseEntity<Product> findAllProduct() {
         List<Product> products =  productService.findAll();
         if (products.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -27,7 +27,7 @@ public class ProductController {
         return new ResponseEntity(products, HttpStatus.OK);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Product> findCustomerById(@PathVariable int id) {
+    public ResponseEntity<Product> findProductById(@PathVariable int id) {
         Optional<Product> productOptional = productService.findById(id);
         if (!productOptional.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -35,7 +35,7 @@ public class ProductController {
         return new ResponseEntity(productOptional, HttpStatus.OK);
     }
     @PostMapping
-    public ResponseEntity<Product> saveCustomer(@RequestBody Product product) {
+    public ResponseEntity<Product> saveProduct(@RequestBody Product product) {
         return new ResponseEntity<>(productService.save(product), HttpStatus.CREATED);
     }
     @PutMapping("/{id}")
